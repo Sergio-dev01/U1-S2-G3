@@ -133,7 +133,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   const characters = starWarsCharacters[i];
 
   if (characters.gender === "female") {
-    femaleCharacters.push(characters.name);
+    femaleCharacters.push(characters);
   }
 }
 
@@ -221,7 +221,6 @@ console.log("Il totale della massa è: ", totalMass);
 let totalMassBoard = 0;
 for (let i = 0; i < starWarsCharacters.length; i++) {
   totalMassBoard = totalMassBoard + starWarsCharacters[i].mass;
-
   if (totalMassBoard < 500) {
     console.log("Ship is under loaded", totalMassBoard);
   } else if (totalMassBoard > 500 && totalMassBoard < 700) {
@@ -255,5 +254,5 @@ console.log(starWarsCharacters);
 */
 
 /* --EXTRA-- ESERCIZIO 10
-  Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
+ MATH Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
