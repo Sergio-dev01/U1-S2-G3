@@ -159,39 +159,64 @@ const eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-let eyeStrange = [];
-
 for (let i = 0; i < starWarsCharacters.length; i++) {
   const characters = starWarsCharacters[i];
-
-  switch (true) {
-    case characters.eye_color === "blue":
-      eyeColor.blue.push(characters.name);
-      console.log("Loro hanno gli occhi blu:", eyeColor.blue);
+  switch (starWarsCharacters[i].eye_color) {
+    case "blue":
+      eyeColor.blue.push(characters);
       break;
-    case characters.eye_color === "yellow":
-      eyeColor.yellow.push(characters.name);
-      console.log("Loro hanno gli occhi gialli:", eyeColor.yellow);
+    case "yellow":
+      eyeColor.yellow.push(characters);
       break;
-    case characters.eye_color === "brown":
-      eyeColor.brown.push(characters.name);
-      console.log("Loro hanno gli occhi marroni:", eyeColor.brown);
+    case "brown":
+      eyeColor.brown.push(characters);
       break;
-    case characters.eye_color === "red":
-      eyeColor.red.push(characters.name);
-      console.log("Loro hanno gli occhi rossi:", eyeColor.red);
+    case "red":
+      eyeColor.red.push(characters);
       break;
-    case characters.eye_color === "blue-grey":
-      eyeColor["blue-gray"].push(characters.name);
-      console.log("Loro hanno gli occhi strani:", eyeColor["blue-gray"]);
+    case "blue-gray":
+      eyeColor["blue-gray"].push(characters);
       break;
-    default:
-      eyeStrange.push(characters.name);
-      console.log("Colore occhi sconosciuto per loro:", eyeStrange);
   }
 }
 
-console.log("________________________");
+console.log(eyeColor);
+
+//------Variante mia------
+
+// let eyeStrange = [];
+
+// for (let i = 0; i < starWarsCharacters.length; i++) {
+//   const characters = starWarsCharacters[i];
+
+//   switch (true) {
+//     case characters.eye_color === "blue":
+//       eyeColor.blue.push(characters.name);
+//       console.log("Loro hanno gli occhi blu:", eyeColor.blue);
+//       break;
+//     case characters.eye_color === "yellow":
+//       eyeColor.yellow.push(characters.name);
+//       console.log("Loro hanno gli occhi gialli:", eyeColor.yellow);
+//       break;
+//     case characters.eye_color === "brown":
+//       eyeColor.brown.push(characters.name);
+//       console.log("Loro hanno gli occhi marroni:", eyeColor.brown);
+//       break;
+//     case characters.eye_color === "red":
+//       eyeColor.red.push(characters.name);
+//       console.log("Loro hanno gli occhi rossi:", eyeColor.red);
+//       break;
+//     case characters.eye_color === "blue-grey":
+//       eyeColor["blue-gray"].push(characters.name);
+//       console.log("Loro hanno gli occhi strani:", eyeColor["blue-gray"]);
+//       break;
+//     default:
+//       eyeStrange.push(characters.name);
+//       console.log("Colore occhi sconosciuto per loro:", eyeStrange);
+//   }
+// }
+
+// console.log("________________________");
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
