@@ -146,7 +146,7 @@ console.log("________________________");
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 
-let eyeColor = {
+const eyeColor = {
   blue: [],
   yellow: [],
   brown: [],
