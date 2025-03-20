@@ -184,39 +184,39 @@ console.log(eyeColor);
 
 //------Variante mia------
 
-// let eyeStrange = [];
+let eyeStrange = [];
 
-// for (let i = 0; i < starWarsCharacters.length; i++) {
-//   const characters = starWarsCharacters[i];
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const characters = starWarsCharacters[i];
 
-//   switch (true) {
-//     case characters.eye_color === "blue":
-//       eyeColor.blue.push(characters.name);
-//       console.log("Loro hanno gli occhi blu:", eyeColor.blue);
-//       break;
-//     case characters.eye_color === "yellow":
-//       eyeColor.yellow.push(characters.name);
-//       console.log("Loro hanno gli occhi gialli:", eyeColor.yellow);
-//       break;
-//     case characters.eye_color === "brown":
-//       eyeColor.brown.push(characters.name);
-//       console.log("Loro hanno gli occhi marroni:", eyeColor.brown);
-//       break;
-//     case characters.eye_color === "red":
-//       eyeColor.red.push(characters.name);
-//       console.log("Loro hanno gli occhi rossi:", eyeColor.red);
-//       break;
-//     case characters.eye_color === "blue-grey":
-//       eyeColor["blue-gray"].push(characters.name);
-//       console.log("Loro hanno gli occhi strani:", eyeColor["blue-gray"]);
-//       break;
-//     default:
-//       eyeStrange.push(characters.name);
-//       console.log("Colore occhi sconosciuto per loro:", eyeStrange);
-//   }
-// }
+  switch (true) {
+    case characters.eye_color === "blue":
+      eyeColor.blue.push(characters.name);
+      console.log("Loro hanno gli occhi blu:", eyeColor.blue);
+      break;
+    case characters.eye_color === "yellow":
+      eyeColor.yellow.push(characters.name);
+      console.log("Loro hanno gli occhi gialli:", eyeColor.yellow);
+      break;
+    case characters.eye_color === "brown":
+      eyeColor.brown.push(characters.name);
+      console.log("Loro hanno gli occhi marroni:", eyeColor.brown);
+      break;
+    case characters.eye_color === "red":
+      eyeColor.red.push(characters.name);
+      console.log("Loro hanno gli occhi rossi:", eyeColor.red);
+      break;
+    case characters.eye_color === "blue-grey":
+      eyeColor["blue-gray"].push(characters.name);
+      console.log("Loro hanno gli occhi strani:", eyeColor["blue-gray"]);
+      break;
+    default:
+      eyeStrange.push(characters.name);
+      console.log("Colore occhi sconosciuto per loro:", eyeStrange);
+  }
+}
 
-// console.log("________________________");
+console.log("________________________");
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
@@ -233,7 +233,7 @@ while (i < starWarsCharacters.length) {
   i++;
 }
 
-console.log("Il totale della massa è: ", totalMass);
+// console.log("Il totale della massa è: ", totalMass);
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
 
@@ -246,24 +246,16 @@ console.log("Il totale della massa è: ", totalMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-let totalMassBoard = 0;
-for (let i = 0; i < starWarsCharacters.length; i++) {
-  const characters = starWarsCharacters[i];
-
-  totalMassBoard = totalMassBoard + characters.mass;
-  if (totalMassBoard < 500) {
-    console.log("Ship is under loaded", totalMassBoard);
-  } else if (totalMassBoard > 500 && totalMassBoard < 700) {
-    console.log("Ship is half loaded", totalMassBoard);
-  } else if (totalMassBoard > 700 && totalMassBoard < 900) {
-    console.log(" Warning: Load is over 700", totalMassBoard);
-  } else if (totalMassBoard > 900 && totalMassBoard < 1000) {
-    console.log(" Critical Load: is over 700", totalMassBoard);
-  } else if (totalMassBoard > 1000) {
-    console.log(" Critical Load: is over 700", totalMassBoard);
-  } else {
-    console.log("Addio!");
-  }
+if (totalMass < 500) {
+  console.log("Ship is under loaded", totalMass);
+} else if (totalMass >= 500 && totalMass < 700) {
+  console.log("Ship is half loaded", totalMass);
+} else if (totalMass >= 700 && totalMass < 900) {
+  console.log(" Warning: Load is over 700", totalMass);
+} else if (totalMass >= 900 && totalMass < 1000) {
+  console.log(" Critical Load: is over 700", totalMass);
+} else {
+  console.log(" DANGER! OVERLOAD ALERT: escape from ship now!", totalMass);
 }
 
 /* ESERCIZIO 8
@@ -271,12 +263,14 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 */
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender === "n/a") {
-    starWarsCharacters[i].gender = "robot";
+  const characters = starWarsCharacters[i];
+
+  if (characters.gender === "n/a") {
+    characters.gender = "robot";
   }
 }
 
-console.log(starWarsCharacters);
+// console.log(starWarsCharacters);
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
