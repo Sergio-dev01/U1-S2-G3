@@ -226,7 +226,10 @@ let totalMass = 0;
 let i = 0;
 
 while (i < starWarsCharacters.length) {
-  totalMass = totalMass + starWarsCharacters[i].mass;
+  const characters = starWarsCharacters[i];
+
+  totalMass = totalMass + characters.mass;
+
   i++;
 }
 
@@ -245,7 +248,9 @@ console.log("Il totale della massa è: ", totalMass);
 
 let totalMassBoard = 0;
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  totalMassBoard = totalMassBoard + starWarsCharacters[i].mass;
+  const characters = starWarsCharacters[i];
+
+  totalMassBoard = totalMassBoard + characters.mass;
   if (totalMassBoard < 500) {
     console.log("Ship is under loaded", totalMassBoard);
   } else if (totalMassBoard > 500 && totalMassBoard < 700) {
